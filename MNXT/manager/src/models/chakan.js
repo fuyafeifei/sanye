@@ -40,8 +40,8 @@ export default {
           },
                 
           *getallshiti({payload},{call,put}){
-            let data=yield call(getshitic)
-             console.log(data)
+            let data=yield call(getshitic,payload)
+          // console.log(data)
             yield put({
               type:"getshiti",
               payload:data.data
@@ -50,7 +50,6 @@ export default {
 
           *getleixing({payload},{call,put}){
             let data=yield call(Getleixing)
-             console.log(data)
             yield put({
               type:"getleixinga",
               payload:data.data

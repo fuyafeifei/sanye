@@ -13,9 +13,11 @@ const app = dva();
 // app.use({});
 
 // 3. Model
-app.model(require('./models/chakan').default);
 
 app.model(require('./models/user').default);
+app.model(require('./models/add').default);
+app.model(require('./models/shiTi').default);
+app.model(require('./models/chakan').default);
 
 // 4. Router
 app.router(require('./router').default);

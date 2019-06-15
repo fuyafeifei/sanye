@@ -13,15 +13,22 @@ class ChaKan extends Component {
         getAllCourseS()
         getshitia()
         getleixingac()
-
+        
         setTimeout(() => {
-
-            console.log(this.props)
+            // console.log(this.props)
         }, 2000)
-
-
     }
+     // 点击跳详情
+    dlBtn(id){
+        let {history:{push}} = this.props;
+
+        push(`/questions/detail/?id=${id}`)
+       
+    }
+    
     render() {
+         
+        // console.log(this.props)
         const { Option } = Select;
 
         function handleChange(value) {
@@ -72,7 +79,8 @@ class ChaKan extends Component {
                 <div className={style.footer}>
 
                     {
-                        this.props.chakan.getshiTiall.map((item, key) => <div key={key} className={style.dl}>
+                        this.props.chakan.getshiTiall.map((item, key) => 
+                        <div key={key} onClick={this.dlBtn.bind(this,item.questions_id)} className={style.dl}>
 
                             <div className={style.dt}>
                                 <div className={style.titles}>{item.title}</div>

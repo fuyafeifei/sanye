@@ -8,38 +8,14 @@ export function login(params){
     data: params
   })
 }
-// 所选类型
-export function getExamClass(){
+
+// 获取当前用户ID
+export function UserInfo() {
   return request({
-    url:"/exam/examType",
-    method:"GET"
-  })
+    url:"/user/userInfo",
+  });
 }
 
-  //获取所有课程
-  export function GetAllCourse(){
-    return request({
-      url:"/exam/subject",
-      method:"GET"
-    })
-  }
-        
-    //获取所有试题
-    export function getshitic(){
-      return request({
-        url:"/exam/questions/new",
-        method:"GET"
-      })
-    }
-
-    // 获取所有课题类型
-
-    export function Getleixing(){
-      return request({
-        url:"/exam/getQuestionsType",
-        method:"GET"
-      })
-    }
 
 
 

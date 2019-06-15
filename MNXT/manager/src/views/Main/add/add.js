@@ -172,44 +172,44 @@ function Add(props){
         </div>
     )
 }
-// const mapStateToProps=state=>{
-//     return state.exam
-// }
-// const mapDispatchToProps=dispatch=>{
-//     return {
-//         //添加试题接口
-//         questionsAdd(payload){
-//             dispatch({
-//                 type: 'exam/questions',
-//                 payload
-//             })
+const mapStateToProps=state=>{
+    return state.exam
+}
+const mapDispatchToProps=dispatch=>{
+    return {
+        //添加试题接口
+        questionsAdd(payload){
+            dispatch({
+                type: 'exam/questions',
+                payload
+            })
             
-//         },
+        },
       
-//         //获取所有考试类型 /exam/examType
-//         getExamType(){
-//             dispatch({
-//                 type:"exam/examType"
-//             })
-//         },
-//         //获取所有的课程 exam/subject
-//         getsubjects(){
-//             dispatch({
-//                 type:"exam/subject"
-//             })
-//         },
-//         //获取所有课题类型
-//         QuestionsTypeEs(){
-//             dispatch({
-//                 type:"exam/getQuestionsType"
-//             })
-//         },
-//          //获取当前用户信息
-//          userInfo(){
-//             dispatch({
-//                 type: 'exam/userInfo',
-//             })
-//         }
-//     }
-// }
+        //获取所有考试类型 /exam/examType
+        getExamType(){
+            dispatch({
+                type:"exam/examType"
+            })
+        },
+        //获取所有的课程 exam/subject
+        getsubjects(){
+            dispatch({
+                type:"exam/subject"
+            })
+        },
+        //获取所有课题类型
+        QuestionsTypeEs(){
+            dispatch({
+                type:"exam/getQuestionsType"
+            })
+        },
+         //获取当前用户信息
+         userInfo(){
+            dispatch({
+                type: 'exam/userInfo',
+            })
+        }
+    }
+}
 export default connect(mapStateToProps,mapDispatchToProps)(Form.create()(Add))
